@@ -14,5 +14,5 @@ if [ $# -lt 1 ] ; then
 fi
 
 for dir in $* ; do
-	egrep --color -nri "(password[^)}]|login|token|credentials|username|https?://[^w])" $dir
+	egrep --color -nri "(password[^)}]|login|[^<]token[ =:]|credentials|username|nginx\.key|BEGIN PGP)" --exclude "*.map" $dir
 done

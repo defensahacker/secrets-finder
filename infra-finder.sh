@@ -13,5 +13,5 @@ if [ $# -lt 1 ] ; then
 fi
 
 for dir in $* ; do
-	egrep --color -nri "https?://[^w]" $dir
+	egrep --color -nri "https?://[^(w|example|github)]" $dir
 done
